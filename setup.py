@@ -5,7 +5,7 @@ setuptools.setup(
     version="0.4",
     author="ittv-tools",
     description="API call to oilfox",
-    url="https://github.com/ITTV-tools/olifoxpy",
+    url="https://github.com/phlo-c/oilfoxpy",
     py_modules=["oilfox"],
     package_dir={'': 'src'},
     install_requires=['jwt', 'json', 'requests'],

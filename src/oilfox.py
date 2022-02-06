@@ -9,9 +9,10 @@ class api:
     def __init__(self, email, password):
         self.email = email
         self.password = password
+        self.hwid = hwid
 
     def login(self):
-        url = "https://api.oilfox.io/v3/login"
+        url = "https://api.oilfox.io/customer-api/v1/login"
         logindata = {"email": self.email, "password": self.password}
         logindata = json.dumps(logindata)
         headers = {
@@ -41,7 +42,7 @@ class api:
     def getsummary(self):
         if hasattr(self, "access_token"):
             self.getrefreshtoken()
-            url = "https://api.oilfox.io/v4/summary"
+            url = "https://api.oilfox.io/customer-api/v1/device/" + self.hwid
             headers = {
                 "Content-type": "application/json",
                 "Accept": "application/json",
