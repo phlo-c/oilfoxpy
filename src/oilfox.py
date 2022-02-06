@@ -6,7 +6,7 @@ import time
 
 
 class api:
-    def __init__(self, email, password):
+    def __init__(self, email, password, hwid):
         self.email = email
         self.password = password
         self.hwid = hwid
